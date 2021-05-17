@@ -6,8 +6,11 @@ const Todo = ({ title }) => {
   const [isModalOpen, setModalIsOpen] = useState(false);
 
   const deleteHnadler = () => {
-    console.log(title);
     setModalIsOpen(true);
+  };
+
+  const onCancel = () => {
+    setModalIsOpen(false);
   };
 
   return (
@@ -18,8 +21,8 @@ const Todo = ({ title }) => {
           Delete
         </button>
       </div>
-      {isModalOpen && <Modal />}
-      {isModalOpen && <Backdrop />}
+      {isModalOpen && <Modal onCancel={onCancel} />}
+      {isModalOpen && <Backdrop onCancel={onCancel} />}
     </div>
   );
 };
