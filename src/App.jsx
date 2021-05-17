@@ -1,13 +1,12 @@
+import Todo from "./components/Todo";
+
 const App = () => {
   return (
     <div>
       <h1>My Todos</h1>
-      <div className="card">
-        <h2>Title</h2>
-        <div className="actions">
-          <button className="btn">Delete</button>
-        </div>
-      </div>
+      <Todo title="Task 1" />
+      <Todo title="Task 2" />
+      <Todo title="Task 3" />
     </div>
   );
 };
