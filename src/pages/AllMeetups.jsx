@@ -16,7 +16,7 @@ const AllMeetupsPage = () => {
         return response.json();
       })
       .then((data) => {
-        const meetups = [];
+        var meetups = [];
         for (const key in data) {
           const meetup = {
             id: key,
@@ -24,6 +24,7 @@ const AllMeetupsPage = () => {
           };
           meetups.push(meetup);
         }
+        meetups = meetups.reverse();
         console.log(meetups);
         setLoadedMeetups(meetups);
         setLoading(false);
