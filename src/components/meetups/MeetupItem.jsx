@@ -10,7 +10,7 @@ const MeetupItem = ({ meetup }) => {
   const toggleFavourite = () => {
     if (isItemFavourite) {
       favouriteCtx.removeFavourite(meetup.id);
-      console.log("Item has been removed");
+      console.log(`"${meetup.title}" has been removed`);
     } else {
       favouriteCtx.addFavourite({
         id: meetup.id,
@@ -19,7 +19,7 @@ const MeetupItem = ({ meetup }) => {
         image: meetup.image,
         description: meetup.description,
       });
-      console.log("Item has been added");
+      console.log(`"${meetup.title}" has been added`);
     }
   };
 
