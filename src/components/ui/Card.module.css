@@ -5,3 +5,10 @@
   width: 50%;
   margin: 1rem 0 1.5rem;
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 80%;
+    margin: 1.5rem auto;
+  }
+}

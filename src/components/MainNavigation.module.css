@@ -45,3 +45,18 @@
   padding: 0 1rem;
   margin-left: 0.5rem;
 }
+
+@media screen and (max-width: 540px) {
+  .header a {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .header {
+    height: 100%;
+    padding: 2em 10%;
+  }
+  .header ul {
+    flex-direction: column;
+  }
+}

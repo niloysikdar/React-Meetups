@@ -45,3 +45,9 @@
 .actions button:active {
   background-color: #ffe2ed;
 }
+
+@media screen and (max-width: 720px) {
+  .image {
+    height: auto;
+  }
+}
