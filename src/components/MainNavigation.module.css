@@ -14,7 +14,7 @@
   font-weight: bold;
 }
 
-.header ul {
+.header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -22,19 +22,19 @@
   align-items: baseline;
 }
 
-.header li {
+.header nav li {
   margin-left: 3rem;
 }
 
-.header a {
+.header nav a {
   text-decoration: none;
   font-size: 1.5rem;
   color: #fcb8d2;
 }
 
-.header a:hover,
-.header a:active,
-.header a.active {
+.header nav a:hover,
+.header nav a:active,
+.header nav a.active {
   color: white;
 }
 
@@ -46,17 +46,57 @@
   margin-left: 0.5rem;
 }
 
-@media screen and (max-width: 540px) {
-  .header a {
-    font-size: 0.8rem;
+@media screen and (max-width: 1050px) {
+  .header {
+    padding: 0 6%;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .header nav li {
+    margin-left: 2rem;
+  }
+
+  .header nav a {
+    font-size: 1.1rem;
+  }
+
+  .badge {
+    margin: 0 0 0 0.2em;
+    padding: 0 0.6em;
   }
 }
+
 @media screen and (max-width: 720px) {
   .header {
-    height: 100%;
-    padding: 2em 10%;
+    padding: 0 5%;
   }
-  .header ul {
-    flex-direction: column;
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .header nav li {
+    margin-left: 0.9rem;
+  }
+
+  .header nav a {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header {
+    position: relative;
+  }
+
+  .logo {
+    margin: auto;
+    font-size: 1.3rem;
+  }
+  .header nav {
+    display: none;
   }
 }

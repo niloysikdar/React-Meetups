@@ -1,0 +1,9 @@
+.mobile_navigation {
+  display: none;
+}
+@media screen and (max-width: 540px) {
+  .mobile_navigation {
+    display: block;
+    position: absolute;
+  }
+}
