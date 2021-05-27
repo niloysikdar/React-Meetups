@@ -28,24 +28,28 @@ const MobileNavigation = () => {
         </span>
       </button>
 
-      <nav className={`${classes.mobile_navigation} ${toggle}`}>
-        <ul>
-          <li>
-            <Link to="/">All Meetups</Link>
-          </li>
-          <li>
-            <Link to="/new-meetup">New Meetup</Link>
-          </li>
-          <li>
-            <Link to="/favourites">
-              Favourites
-              <span className={classes.badge}>
-                {favouriteCtx.totalfavourites}
-              </span>
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <div className={`${classes.mobile_navigation} ${toggle}`}>
+        <Link className={classes.mobile_link} onClick={handleToggle} to="/">
+          All Meetups
+        </Link>
+        <Link
+          className={classes.mobile_link}
+          onClick={handleToggle}
+          to="/new-meetup"
+        >
+          New Meetup
+        </Link>
+        <Link
+          className={classes.mobile_link}
+          onClick={handleToggle}
+          to="/favourites"
+        >
+          Favourites
+          <span className={classes.mobile_badge}>
+            {favouriteCtx.totalfavourites}
+          </span>
+        </Link>
+      </div>
     </>
   );
 };
