@@ -5,7 +5,7 @@
 @media screen and (max-width: 540px) {
   .menu_button {
     display: block;
-    position: fixed;
+    position: absolute;
     background: transparent;
     border: none;
     left: 3%;
