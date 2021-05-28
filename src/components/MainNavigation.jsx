@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import { useContext } from "react";
 import FavouritesContext from "../store/favourites-context";
-
+import MobileNavigation from "./MobileNavigation";
 const MainNavigation = () => {
   const favouriteCtx = useContext(FavouritesContext);
 
@@ -10,7 +10,7 @@ const MainNavigation = () => {
     <header className={classes.header}>
       <div className={classes.logo}>React Meetups</div>
 
-      <nav>
+      <nav className={classes.desktop_navigation}>
         <ul>
           <li>
             <Link to="/">All Meetups</Link>
@@ -28,6 +28,7 @@ const MainNavigation = () => {
           </li>
         </ul>
       </nav>
+      <MobileNavigation />
     </header>
   );
 };
